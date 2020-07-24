@@ -4,7 +4,8 @@ mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb://localhost/task_list', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 })
 .then(()=>{
     console.log('Conectado com o banco de TaskList');    

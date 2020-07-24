@@ -1,5 +1,9 @@
 const app = require('./src/config/custom-express.js');
+const getPort = require('get-port');
 
-app.listen(2000, ()=>{
-    console.log('Servidor Rodando na porta 2000');
-})
+(async () => {    
+    const porta = await getPort({port: 4000});
+    app.listen(porta, ()=>{
+        console.log(`Servidor Rodando na porta ${porta}` );
+    })
+})();
