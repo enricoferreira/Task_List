@@ -30,7 +30,11 @@ const Project = new Schema({
     task: [{
         type: Schema.Types.ObjectId,
         ref: 'task'
-    }]    
+    }],
+    board: [{
+        type: Schema.Types.ObjectId,
+        ref: 'board'
+    }]
 })
 
 mongoose.model('project', Project);

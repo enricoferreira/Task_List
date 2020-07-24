@@ -30,11 +30,16 @@ const Task = new Schema({
     }],
     project:{
         type: Schema.Types.ObjectId,
-        ref: 'project'
+        ref: 'project',
+        required: true
     },
     member:{
         type: Schema.Types.ObjectId,
         ref: 'member'
+    },
+    board: {
+        type: Schema.Types.ObjectId,
+        ref: 'board'
     }
 })
 
