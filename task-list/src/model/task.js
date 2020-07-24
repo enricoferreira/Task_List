@@ -24,12 +24,18 @@ const Task = new Schema({
     data_termino: {
         type: Date        
     },
-    label: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'label'            
-        }
-    ]
+    label: [{
+        type: Schema.Types.ObjectId,
+        ref: 'label'            
+    }],
+    project:{
+        type: Schema.Types.ObjectId,
+        ref: 'project'
+    },
+    member:{
+        type: Schema.Types.ObjectId,
+        ref: 'member'
+    }
 })
 
 mongoose.model('task', Task);
